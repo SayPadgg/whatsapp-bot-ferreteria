@@ -15,8 +15,12 @@ const {
 
 // Configuración del cliente para Render
 const client = new Client({
-    authStrategy: new LocalAuth(),
+    authStrategy: new LocalAuth({
+        // opcional: puedes poner una carpeta específica para la sesión
+        // por ejemplo: dataPath: './.wwebjs_auth'
+    }),
     puppeteer: {
+        headless: true, // importante para servidores
         args: ['--no-sandbox', '--disable-setuid-sandbox']
     }
 });
