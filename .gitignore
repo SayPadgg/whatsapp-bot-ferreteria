@@ -1,0 +1,5 @@
+# Ignorar la sesión de WhatsApp Web
+node_modules/
+.wwebjs_auth/
+.wwebjs_cache/
+.env
